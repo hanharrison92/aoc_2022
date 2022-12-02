@@ -38,7 +38,7 @@ highest_calorie_wins <- function(my_input){
     #part 2
     my_df <- arrange(my_df, calories)
     m <- nrow(my_df)
-    my_max_three1 <- sum(my_df$calories[(m-2):m]) 
+    my_max_three1 <- sum(my_df$calories[(m - 2):m])
     
     #part 2 again
     my_df <- arrange(my_df, desc(calories))
@@ -48,8 +48,6 @@ highest_calorie_wins <- function(my_input){
     my_max2 <- my_df$calories[1]
 
     return(c(my_max2, my_max_three2))
-
-
 }
 
 test_max <- highest_calorie_wins(test_input)
